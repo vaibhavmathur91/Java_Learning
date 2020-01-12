@@ -37,5 +37,29 @@ public class Main {
         Date now = new Date();
         System.out.println(now);
 
+        // String Types
+        String message = "hello world";
+        String new_message = "Hello World" + "!!";
+        String trim_message = "   Hello    ";
+        System.out.println(message);
+        System.out.println(trim_message);
+        System.out.println(trim_message.trim());
+        System.out.println(new_message);
+        System.out.println(message.endsWith("!!"));
+        System.out.println(new_message.endsWith("!!"));
+        System.out.println(new_message.startsWith("!!"));
+        System.out.println(new_message.length());
+        System.out.println(new_message.toLowerCase());
+        System.out.println(new_message.toUpperCase());
+        System.out.println(new_message.indexOf("W"));
+        System.out.println(new_message.indexOf("X"));
+
+        // Parameter = def method(param1),    arguments =  method("value_called_with")
+        // Below  parameter = target, replacement     argument = "!", '*'
+        // string.Replace()  method do not change original string
+        System.out.println(new_message.replace("!", "*"));
+        System.out.println(new_message);
+
+
     }
 }
