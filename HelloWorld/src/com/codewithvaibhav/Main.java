@@ -1,5 +1,7 @@
 package com.codewithvaibhav;
 
+import java.util.Date;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -29,6 +31,11 @@ public class Main {
         System.out.println(viewsCount);
         System.out.println(price);
         System.out.println(letter);
+
+
+        // Reference Type
+        Date now = new Date();
+        System.out.println(now);
 
     }
 }
