@@ -19,7 +19,7 @@ public class Main {
             ----------------------------------
             bytes           1           [-128, 127]
             short           2           [-32k, 32k]
-            int             2           [-2B, 2B]
+            int             4           [-2B, 2B]
             long            8
             float           4
             double          8
@@ -39,12 +39,9 @@ public class Main {
         System.out.println(letter);
 
 
-
         // Reference Type
         Date now = new Date();
         System.out.println(now);
-
-
 
 
         // String Types
@@ -72,7 +69,6 @@ public class Main {
         System.out.println(new_message);
 
 
-
         // Array data types
         int[] numbers = new int[5];
         /*
@@ -90,13 +86,54 @@ public class Main {
         System.out.println(Arrays.toString(new_numbers));
 
 
-
         // Multi-Dimensional Array
         int[][] matrix_nums = new int[2][3];
         matrix_nums[0][0] = 1;
         System.out.println(Arrays.deepToString(matrix_nums));
-        int[][] new_matrix_nums = {{1 ,2 ,3}, {4, 5, 6}};
+        int[][] new_matrix_nums = {{1, 2, 3}, {4, 5, 6}};
         System.out.println(Arrays.deepToString(new_matrix_nums));
+
+
+        // Constant Declaration
+
+        float pi = 3.14F;
+        pi = 3.66F;
+        System.out.println(pi);
+        /*
+            normally we can change value of data types
+            but we need constant whose value does not change
+        */
+        final float new_pi = 3.14F;
+        /*this value is constant and can not be changed*/
+
+
+
+        // Type Casting
+        /*
+            implicit casting:
+            > (converted to)
+            byte > short > int > long > float > double
+        */
+        short x = 1;
+        int y = x + 2;
+        System.out.println(y);
+
+
+
+        //Explicit casting
+        double a = 2.2;
+        int b = (int)a + 5;
+        System.out.println(b);
+
+        int result = 10 / 3;    //result = 3  as int/int = int
+        System.out.println(result);
+        /* so we change int to double and get result as double*/
+        double get_division = (double)10 / (double)3;
+        System.out.println(get_division);
+
+        String xx = "1";
+        int yy = Integer.parseInt(xx) + 4;
+        System.out.println(yy);
 
     }
 }
