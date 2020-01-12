@@ -1,8 +1,9 @@
 package com.codewithvaibhav;
 
-import java.sql.Array;
 import java.util.Arrays;
 import java.util.Date;
+import java.lang.Math;
+
 
 public class Main {
 
@@ -33,6 +34,7 @@ public class Main {
         float price = 10.99F;
         char letter = 'A';
         boolean isEligible = true;
+        System.out.println(isEligible);
         System.out.println(age);
         System.out.println(viewsCount);
         System.out.println(price);
@@ -135,5 +137,24 @@ public class Main {
         int yy = Integer.parseInt(xx) + 4;
         System.out.println(yy);
 
+
+
+        // Math Module
+        int result1 = Math.round(1.1F);
+        System.out.println(result1);
+        int result2 = (int)Math.ceil(1.1F);
+        System.out.println(result2);
+        int result3 = (int)Math.ceil(1.1F);
+        System.out.println(result3);
+        int result4 = Math.max(1, 2);
+        System.out.println(result4);
+        int result5 = Math.min(1, 2);
+        System.out.println(result5);
+        long result6 = Math.round(Math.random() * 100);
+        System.out.println(result6);
+        int result7 = (int)Math.round(Math.random() * 100);
+        System.out.println(result7);
+        int result8 = (int)(Math.random() * 100);
+        System.out.println(result8);
     }
 }
