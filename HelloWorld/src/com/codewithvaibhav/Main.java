@@ -1,8 +1,10 @@
 package com.codewithvaibhav;
 
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.lang.Math;
+import java.util.Scanner;
 
 
 public class Main {
@@ -156,5 +158,41 @@ public class Main {
         System.out.println(result7);
         int result8 = (int)(Math.random() * 100);
         System.out.println(result8);
+
+
+
+        // Number Formatting
+
+        NumberFormat curreny = NumberFormat.getCurrencyInstance();
+        String cur_res1 = curreny.format(123456.90978);
+        System.out.println(cur_res1);
+
+        String cur_res2 = NumberFormat.getPercentInstance().format(0.1);
+        System.out.println(cur_res2);
+
+
+
+        // Input from terminal
+        Scanner input = new Scanner(System.in);
+        /*
+        long age1 = input.nextLong();
+        float age1 = input.nextFloat();
+         */
+        System.out.print("age1 is : ");
+        byte age1 = input.nextByte();
+        System.out.println("age1 "+ age1);
+
+        System.out.print("age2 is : ");
+        long age2 = input.nextLong();
+        System.out.println("age2 " + age2);
+
+        System.out.print("age3 is (Type: cat and mat): ");
+        String name_inp_1 = input.next();
+        System.out.println("Name1: " + name_inp_1);
+
+
+        System.out.print("age3 is (Type: cat and mat): ");
+        String name_inp_2 = input.nextLine();
+        System.out.println("Name2: " + name_inp_2);
     }
 }
