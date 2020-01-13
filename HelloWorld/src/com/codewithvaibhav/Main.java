@@ -1,5 +1,6 @@
 package com.codewithvaibhav;
 
+import javax.sound.midi.Soundbank;
 import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -185,14 +186,108 @@ public class Main {
         System.out.print("age2 is : ");
         long age2 = input.nextLong();
         System.out.println("age2 " + age2);
-
-        System.out.print("age3 is (Type: cat and mat): ");
-        String name_inp_1 = input.next();
+        /*
+        System.out.print("name1: ");
+        String name_inp_1 = input.nextLine();
         System.out.println("Name1: " + name_inp_1);
-
-
-        System.out.print("age3 is (Type: cat and mat): ");
-        String name_inp_2 = input.nextLine();
+         */
+        System.out.print("xxxxxxxx");
+        System.out.print("name2  is (Type: cat and mat): ");
+        String name_inp_2 = input.next();
         System.out.println("Name2: " + name_inp_2);
+
+
+        //Comparision operators
+        int x1 = 1;
+        int y1 = 2;
+        System.out.println(x1 == y1);
+        System.out.println(x1 != y1);
+        System.out.println(x1 <= y1);
+        System.out.println(x1 >= y1);
+        System.out.println("-======-");
+
+
+
+        //Logical operators
+        int temp1 = 22;
+        boolean isWarm = temp1 > 20 && temp1 < 30;
+        System.out.println(isWarm);
+
+        boolean hasHighIncome = false;
+        boolean hasGoodCredit = true;
+        boolean hasCriminalRecord = false;
+        boolean isEligibleForLoan = (hasHighIncome || hasGoodCredit) && ! hasCriminalRecord;
+        System.out.println(isEligibleForLoan);
+
+
+
+        // If-Statements
+        int temp = 32;
+        if(temp >30){
+            System.out.println("Its hot day");
+            System.out.println("drink water");
+        }
+        else if(temp>20){
+            System.out.println("Beautiful day");
+        }
+        else{
+            System.out.println("Cold Day");
+        }
+
+
+        int income = 120_000;
+        boolean hasHighIncome1;
+        if (income>100_000){
+            hasHighIncome1 = true;
+        }
+        else{
+            hasHighIncome1 = false;
+        }
+
+        int income2 = 120_000;
+        boolean hasHighIncome2 = income2 > 100_000;
+        System.out.println(hasHighIncome2);
+
+
+        // Ternary operator
+        int income3 = 120_000;
+        String className1;
+        if(income3 > 100_000){
+            className1 = "First";
+        }
+        else{
+            className1 = "Economy";
+        }
+
+
+        int income4 = 120_000;
+        String className4 = income4 > 100_000 ? "First": "Economy";
+        System.out.println(className4);
+
+
+
+        //Switch Statements
+        String role1 = "admin";
+        if(role1 == "admin"){
+            System.out.println("you are admin");
+        }
+        else if(role1 == "moderator"){
+            System.out.println("you are moderator");
+        }
+        else{
+            System.out.println("you are a guest");
+        }
+
+
+        switch (role1){
+            case "admin":
+                System.out.println("you are admin");
+                break;
+            case "moderator":
+                System.out.println("you are moderator");
+                break;
+            default:
+                System.out.println("you are a guest");
+        }
     }
 }
