@@ -1,6 +1,5 @@
 package com.codewithvaibhav;
 
-import javax.sound.midi.Soundbank;
 import java.text.NumberFormat;
 import java.util.*;
 import java.lang.Math;
@@ -391,8 +390,74 @@ public class Main {
 
 
         // list of class-instances
-        List<User> users = new ArrayList<User>();
-        users.add(user1);
-        users.add(user2);
+        List<User> users_list = new ArrayList<User>();
+        users_list.add(user1);
+        users_list.add(user2);
+
+
+        //static method
+        /* static method are called with Class name instead of class-instance*/
+        User.PrintSingleUser(user1);
+        User.PrintMultiUsers(users_list);
+
+
+
+        // Method overloading
+        user1.output(3);
+        user1.output();
+
+
+
+        // Inheritance and method overriding
+        Student s = new Student();
+        s.major = "Mtech";
+        s.firstName = "first_student";
+        s.lastName = "last_student";
+        System.out.println(s.major);
+        System.out.println("student information : ");
+        s.PrintFullName();
+
+
+        //Enums
+        s.status = Student.statusChoice.passed;
+        System.out.println(s.status);
+
+
+        // Abstract class
+
+        /*
+        //Employee class is abstract
+        Employee temp_obj = new Employee();  // This is not valid as class is abstract
+        temp_obj.empId = 1;
+        System.out.println(temp_obj.empId);
+        */
+
+
+
+
+        // Abstract method
+        /* getAbstractMethodExample inside Employee is abstract method  */
+
+
+
+        //Constructor
+        /*Student method inside student class is constructor*/
+
+
+
+
+        // Super method
+        /*
+        Example : super.verified call inside student constructor
+        super will call object of inherited class
+        */
+
+
+        //Final Keyword
+        /*
+         getLastName method inside User class can not be  overridden in child class
+
+         NOTE: public final Class () {}   can not be extended by other class
+        */
     }
 }
