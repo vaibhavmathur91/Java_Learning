@@ -2,10 +2,8 @@ package com.codewithvaibhav;
 
 import javax.sound.midi.Soundbank;
 import java.text.NumberFormat;
-import java.util.Arrays;
-import java.util.Date;
+import java.util.*;
 import java.lang.Math;
-import java.util.Scanner;
 
 
 public class Main {
@@ -289,5 +287,112 @@ public class Main {
             default:
                 System.out.println("you are a guest");
         }
+
+
+
+        //Loops
+
+        //while
+        int i = 0;
+        while(i < 10){
+            System.out.println(i);
+            i++;
+        }
+
+        System.out.println("\n Guess new password !!");
+        String pass = "password";
+        Scanner input1 = new Scanner(System.in);
+        String guess = input1.nextLine();
+        while(!guess.equals(pass)){
+            System.out.println("\n Guess new password !!");
+            guess = input1.nextLine();
+        }
+
+
+
+        //do-while
+        String pass_do_while = "password";
+        Scanner input_do_while = new Scanner(System.in);
+        String guess_do_while;
+        do{
+            System.out.println("\n Guess new password !!");
+            guess_do_while = input_do_while.nextLine();
+        }while(!guess_do_while.equals(pass_do_while));
+
+
+
+        //FOR-LOOP
+        for(int i_for=0;i_for<10;i_for++){
+            System.out.println(i_for);
+        }
+
+
+
+
+        // Special ARRAYS Methods
+
+        //check 2 array are equal
+        int[] grade1 = {1,2};
+        int[] grade2 = {1,2};
+        Arrays.equals(grade1, grade2);
+
+        // fill all values in array with 1 value
+        int[] some_array = {1,2,3,4};
+        Arrays.fill(some_array, 8);
+        System.out.println(Arrays.toString(some_array));
+
+        // List types
+        List<Integer> dummy_grades = new ArrayList<Integer>();
+        dummy_grades.add(11);
+        dummy_grades.add(22);
+        dummy_grades.add(33);
+        dummy_grades.add(44);
+        dummy_grades.add(55);
+        dummy_grades.add(2, 55);
+        System.out.println(dummy_grades.indexOf(77));  // index or -1
+        System.out.println(dummy_grades.contains(77)); // true or false
+        System.out.println(dummy_grades.isEmpty()); // true or false
+        System.out.println(dummy_grades);
+        System.out.println(dummy_grades.get(1));
+
+        // Arrays to List
+        int[] grades1 = {1,2,3,4};
+        List<Integer> new_grades = Arrays.asList(1,2,3,4);
+
+        // For Each loop
+        List<Integer> new_grades1 = Arrays.asList(1,2,3,4);
+        for(Integer grade: new_grades1){
+            System.out.println(grade);
+        }
+
+        // Sort List type
+        Collections.sort(new_grades1);
+        Collections.reverse(new_grades1);
+
+
+
+
+        // Class and Oops concepts
+        User user1 = new User();
+        user1.firstName = "Vaibhav";
+        user1.lastName = "Mathur";
+        user1.output(5);
+        user1.getFirstName();
+        user1.setGender("male");
+        user1.getGender();
+
+        User user2 = new User();
+        user2.firstName = "Anubhav";
+        user2.lastName = "Mathur";
+        user2.output(5);
+        user2.getFirstName();
+        user2.setGender("male");
+        user2.getGender();
+
+
+        // list of class-instances
+        List<User> users = new ArrayList<User>();
+        users.add(user1);
+        users.add(user2);
     }
 }
