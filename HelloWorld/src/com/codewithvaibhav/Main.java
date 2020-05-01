@@ -121,16 +121,15 @@ public class Main {
         System.out.println(y);
 
 
-
         //Explicit casting
         double a = 2.2;
-        int b = (int)a + 5;
+        int b = (int) a + 5;
         System.out.println(b);
 
         int result = 10 / 3;    //result = 3  as int/int = int
         System.out.println(result);
         /* so we change int to double and get result as double*/
-        double get_division = (double)10 / (double)3;
+        double get_division = (double) 10 / (double) 3;
         System.out.println(get_division);
 
         String xx = "1";
@@ -138,13 +137,12 @@ public class Main {
         System.out.println(yy);
 
 
-
         // Math Module
         int result1 = Math.round(1.1F);
         System.out.println(result1);
-        int result2 = (int)Math.ceil(1.1F);
+        int result2 = (int) Math.ceil(1.1F);
         System.out.println(result2);
-        int result3 = (int)Math.ceil(1.1F);
+        int result3 = (int) Math.ceil(1.1F);
         System.out.println(result3);
         int result4 = Math.max(1, 2);
         System.out.println(result4);
@@ -152,11 +150,10 @@ public class Main {
         System.out.println(result5);
         long result6 = Math.round(Math.random() * 100);
         System.out.println(result6);
-        int result7 = (int)Math.round(Math.random() * 100);
+        int result7 = (int) Math.round(Math.random() * 100);
         System.out.println(result7);
-        int result8 = (int)(Math.random() * 100);
+        int result8 = (int) (Math.random() * 100);
         System.out.println(result8);
-
 
 
         // Number Formatting
@@ -169,7 +166,6 @@ public class Main {
         System.out.println(cur_res2);
 
 
-
         // Input from terminal
         Scanner input = new Scanner(System.in);
         /*
@@ -178,7 +174,7 @@ public class Main {
          */
         System.out.print("age1 is : ");
         byte age1 = input.nextByte();
-        System.out.println("age1 "+ age1);
+        System.out.println("age1 " + age1);
 
         System.out.print("age2 is : ");
         long age2 = input.nextLong();
@@ -204,7 +200,6 @@ public class Main {
         System.out.println("-======-");
 
 
-
         //Logical operators
         int temp1 = 22;
         boolean isWarm = temp1 > 20 && temp1 < 30;
@@ -213,31 +208,27 @@ public class Main {
         boolean hasHighIncome = false;
         boolean hasGoodCredit = true;
         boolean hasCriminalRecord = false;
-        boolean isEligibleForLoan = (hasHighIncome || hasGoodCredit) && ! hasCriminalRecord;
+        boolean isEligibleForLoan = (hasHighIncome || hasGoodCredit) && !hasCriminalRecord;
         System.out.println(isEligibleForLoan);
-
 
 
         // If-Statements
         int temp = 32;
-        if(temp >30){
+        if (temp > 30) {
             System.out.println("Its hot day");
             System.out.println("drink water");
-        }
-        else if(temp>20){
+        } else if (temp > 20) {
             System.out.println("Beautiful day");
-        }
-        else{
+        } else {
             System.out.println("Cold Day");
         }
 
 
         int income = 120_000;
         boolean hasHighIncome1;
-        if (income>100_000){
+        if (income > 100_000) {
             hasHighIncome1 = true;
-        }
-        else{
+        } else {
             hasHighIncome1 = false;
         }
 
@@ -249,34 +240,30 @@ public class Main {
         // Ternary operator
         int income3 = 120_000;
         String className1;
-        if(income3 > 100_000){
+        if (income3 > 100_000) {
             className1 = "First";
-        }
-        else{
+        } else {
             className1 = "Economy";
         }
 
 
         int income4 = 120_000;
-        String className4 = income4 > 100_000 ? "First": "Economy";
+        String className4 = income4 > 100_000 ? "First" : "Economy";
         System.out.println(className4);
-
 
 
         //Switch Statements
         String role1 = "admin";
-        if(role1 == "admin"){
+        if (role1 == "admin") {
             System.out.println("you are admin");
-        }
-        else if(role1 == "moderator"){
+        } else if (role1 == "moderator") {
             System.out.println("you are moderator");
-        }
-        else{
+        } else {
             System.out.println("you are a guest");
         }
 
 
-        switch (role1){
+        switch (role1) {
             case "admin":
                 System.out.println("you are admin");
                 break;
@@ -288,12 +275,11 @@ public class Main {
         }
 
 
-
         //Loops
 
         //while
         int i = 0;
-        while(i < 10){
+        while (i < 10) {
             System.out.println(i);
             i++;
         }
@@ -302,41 +288,37 @@ public class Main {
         String pass = "password";
         Scanner input1 = new Scanner(System.in);
         String guess = input1.nextLine();
-        while(!guess.equals(pass)){
+        while (!guess.equals(pass)) {
             System.out.println("\n Guess new password !!");
             guess = input1.nextLine();
         }
-
 
 
         //do-while
         String pass_do_while = "password";
         Scanner input_do_while = new Scanner(System.in);
         String guess_do_while;
-        do{
+        do {
             System.out.println("\n Guess new password !!");
             guess_do_while = input_do_while.nextLine();
-        }while(!guess_do_while.equals(pass_do_while));
-
+        } while (!guess_do_while.equals(pass_do_while));
 
 
         //FOR-LOOP
-        for(int i_for=0;i_for<10;i_for++){
+        for (int i_for = 0; i_for < 10; i_for++) {
             System.out.println(i_for);
         }
-
-
 
 
         // Special ARRAYS Methods
 
         //check 2 array are equal
-        int[] grade1 = {1,2};
-        int[] grade2 = {1,2};
+        int[] grade1 = {1, 2};
+        int[] grade2 = {1, 2};
         Arrays.equals(grade1, grade2);
 
         // fill all values in array with 1 value
-        int[] some_array = {1,2,3,4};
+        int[] some_array = {1, 2, 3, 4};
         Arrays.fill(some_array, 8);
         System.out.println(Arrays.toString(some_array));
 
@@ -355,20 +337,18 @@ public class Main {
         System.out.println(dummy_grades.get(1));
 
         // Arrays to List
-        int[] grades1 = {1,2,3,4};
-        List<Integer> new_grades = Arrays.asList(1,2,3,4);
+        int[] grades1 = {1, 2, 3, 4};
+        List<Integer> new_grades = Arrays.asList(1, 2, 3, 4);
 
         // For Each loop
-        List<Integer> new_grades1 = Arrays.asList(1,2,3,4);
-        for(Integer grade: new_grades1){
+        List<Integer> new_grades1 = Arrays.asList(1, 2, 3, 4);
+        for (Integer grade : new_grades1) {
             System.out.println(grade);
         }
 
         // Sort List type
         Collections.sort(new_grades1);
         Collections.reverse(new_grades1);
-
-
 
 
         // Class and Oops concepts
@@ -401,11 +381,9 @@ public class Main {
         User.PrintMultiUsers(users_list);
 
 
-
         // Method overloading
         user1.output(3);
         user1.output();
-
 
 
         // Inheritance and method overriding
@@ -433,17 +411,12 @@ public class Main {
         */
 
 
-
-
         // Abstract method
         /* getAbstractMethodExample inside Employee is abstract method  */
 
 
-
         //Constructor
         /*Student method inside student class is constructor*/
-
-
 
 
         // Super method
@@ -451,7 +424,6 @@ public class Main {
         Example : super.verified call inside student constructor
         super will call object of inherited class
         */
-
 
         //Final Keyword
         /*
